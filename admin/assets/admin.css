@@ -1,0 +1,356 @@
+/* ==========================================================================
+   WP R2 Offload — Admin Styles
+   ========================================================================== */
+
+/* ── Wrap & title ─────────────────────────────────────────────────────────── */
+.r2-offload-wrap {
+	max-width: 1100px;
+}
+
+.r2-offload-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 1.5rem;
+	margin-bottom: 4px;
+}
+
+.r2-offload-title .dashicons {
+	font-size: 1.6rem;
+	color: #f6821f;
+}
+
+.r2-offload-content {
+	padding-top: 20px;
+}
+
+/* ── Nav tab badge (credentials missing) ───────────────────────────────────── */
+.r2-badge-warn {
+	display: inline-block;
+	background: #d63638;
+	color: #fff;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	font-size: 11px;
+	line-height: 16px;
+	text-align: center;
+	margin-left: 4px;
+	vertical-align: middle;
+}
+
+/* ── Alert banner ──────────────────────────────────────────────────────────── */
+.r2-alert {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 14px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+
+.r2-alert--warn {
+	background: #fcf9e8;
+	border-left: 4px solid #dba617;
+	color: #7a5200;
+}
+
+.r2-alert--warn .dashicons {
+	color: #dba617;
+}
+
+/* ── Stats cards grid ─────────────────────────────────────────────────────── */
+.r2-stats-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.r2-stat-card {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 6px;
+	padding: 20px 18px;
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .06);
+	transition: box-shadow .15s;
+}
+
+.r2-stat-card:hover {
+	box-shadow: 0 3px 10px rgba(0, 0, 0, .10);
+}
+
+.r2-stat-value {
+	font-size: 2.2rem;
+	font-weight: 700;
+	line-height: 1;
+	color: #1d2327;
+}
+
+.r2-stat-value--sm {
+	font-size: 1.2rem;
+}
+
+.r2-stat-label {
+	margin-top: 6px;
+	font-size: 12px;
+	color: #646970;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+}
+
+.r2-stat-card--total {
+	border-top: 4px solid #2271b1;
+}
+
+.r2-stat-card--pending {
+	border-top: 4px solid #dba617;
+}
+
+.r2-stat-card--error {
+	border-top: 4px solid #d63638;
+}
+
+.r2-stat-card--time {
+	border-top: 4px solid #1d9e22;
+}
+
+/* ── Panel ─────────────────────────────────────────────────────────────────── */
+.r2-panel {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 6px;
+	padding: 20px 24px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+}
+
+.r2-panel__title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0 0 14px;
+	color: #1d2327;
+}
+
+.r2-panel__title .dashicons {
+	color: #2271b1;
+}
+
+/* ── Progress bar ──────────────────────────────────────────────────────────── */
+.r2-progress-bar {
+	background: #e0e0e0;
+	border-radius: 20px;
+	height: 10px;
+	margin: 12px 0 6px;
+	overflow: hidden;
+}
+
+.r2-progress-fill {
+	height: 100%;
+	background: linear-gradient(90deg, #2271b1, #72aee6);
+	border-radius: 20px;
+	width: 0;
+	transition: width .3s ease;
+}
+
+.r2-progress-label {
+	font-size: 13px;
+	color: #50575e;
+	margin: 0;
+}
+
+/* ── Live badge & spinner ──────────────────────────────────────────────────── */
+.r2-live-dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #c3c4c7;
+	margin-left: auto;
+	transition: background .3s;
+}
+
+.r2-live-dot--active {
+	background: #1d9e22;
+	animation: r2-pulse 1.4s infinite;
+}
+
+@keyframes r2-pulse {
+
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: .4;
+	}
+}
+
+.r2-spin {
+	animation: r2-spin 1.2s linear infinite;
+}
+
+@keyframes r2-spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* ── Active uploads list ───────────────────────────────────────────────────── */
+.r2-active-uploads {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.r2-active-uploads li {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 0;
+	border-bottom: 1px solid #f0f0f1;
+	font-size: 13px;
+}
+
+.r2-active-uploads li:last-child {
+	border-bottom: none;
+}
+
+.r2-upload-icon {
+	color: #2271b1;
+}
+
+.r2-elapsed {
+	color: #646970;
+	font-size: 12px;
+}
+
+.r2-idle-text {
+	color: #646970;
+	margin: 0;
+	font-style: italic;
+}
+
+.r2-loading {
+	color: #646970;
+	margin: 0;
+}
+
+/* ── Quick actions ─────────────────────────────────────────────────────────── */
+.r2-quick-actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+/* ── Selective upload table ────────────────────────────────────────────────── */
+.r2-selective-table th,
+.r2-selective-table td {
+	padding: 7px 10px;
+}
+
+.r2-sel-actions {
+	margin-top: 12px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+/* ── Settings form ─────────────────────────────────────────────────────────── */
+.r2-settings-form .form-table th {
+	width: 200px;
+}
+
+.r2-submit-row {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+/* ── Test connection result ────────────────────────────────────────────────── */
+.r2-test-result {
+	font-size: 13px;
+	font-weight: 600;
+	padding: 4px 8px;
+	border-radius: 4px;
+}
+
+.r2-test-result.is-success {
+	color: #1d9e22;
+	background: #edfaee;
+}
+
+.r2-test-result.is-error {
+	color: #d63638;
+	background: #ffecec;
+}
+
+/* ── Logs toolbar ──────────────────────────────────────────────────────────── */
+.r2-logs-toolbar {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	flex-wrap: wrap;
+	margin-bottom: 16px;
+}
+
+.r2-btn-danger {
+	background: #d63638 !important;
+	border-color: #b02a2c !important;
+	color: #fff !important;
+}
+
+.r2-btn-danger:hover {
+	background: #b02a2c !important;
+}
+
+/* ── Log table badges ──────────────────────────────────────────────────────── */
+.r2-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 20px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.r2-badge--success {
+	background: #edfaee;
+	color: #1d9e22;
+}
+
+.r2-badge--error {
+	background: #ffecec;
+	color: #d63638;
+}
+
+/* ── Log table ─────────────────────────────────────────────────────────────── */
+.r2-log-table code {
+	font-size: 12px;
+	word-break: break-all;
+}
+
+.r2-empty-state {
+	color: #646970;
+	text-align: center;
+	padding: 40px;
+	font-style: italic;
+	border: 2px dashed #c3c4c7;
+	border-radius: 6px;
+}
+
+/* ── Bulk status ───────────────────────────────────────────────────────────── */
+.r2-bulk-status {
+	margin-top: 12px;
+}
