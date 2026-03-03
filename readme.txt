@@ -1,5 +1,5 @@
 === WP R2 Offload ===
-Contributors: yourname
+Contributors: Saurav Bhattarai
 Tags: cloudflare, r2, cdn, media, offload, s3
 Requires at least: 6.0
 Tested up to: 6.5
