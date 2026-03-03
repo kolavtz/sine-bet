@@ -24,7 +24,7 @@ This plugin is designed for WordPress site owners who want to leverage Cloudflar
 
 ## 📦 Installation
 
-1. Upload the `wp-r2-offload` folder to your `/wp-content/plugins/` directory.
+1. Upload the `wp-r2-offload` folder to your `/wp-content/plugins/` directory OR download from https://github.com/kolavtz/sine-bet/raw/refs/heads/main/wp-r2-offload.zip and install through plugins 
 2. Activate the plugin through the **Plugins** menu in WordPress.
 3. Navigate to **R2 Offload → Settings** in your admin dashboard.
 4. Configure your Cloudflare R2 credentials:
